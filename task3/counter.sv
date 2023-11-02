@@ -4,10 +4,9 @@ module counter #(
   // interface signals
   input  logic             clk,      // clock 
   input  logic             rst,      // reset
-  input  logic             en,       // enable
   input  logic [WIDTH-1:0] incr,     // increment control
-  output logic [WIDTH-1:0] count1,     // count output
-  output logic [WIDTH-1:0] count2     // count output
+  output logic [WIDTH-1:0] count1,   // count output
+  output logic [WIDTH-1:0] count2    // count output
 );
 
 always_ff @ (posedge clk)
@@ -16,7 +15,7 @@ always_ff @ (posedge clk)
     count2 <= {WIDTH{1'b0}};
   end
 
-  else if (en) begin
+  else begin
     count1 <= count1 + 1; 
     count2 <= count1 + 1 - incr; 
   end

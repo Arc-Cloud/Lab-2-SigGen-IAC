@@ -27,7 +27,6 @@ class Vsigdelay VL_NOT_FINAL : public VerilatedModel {
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clk,0,0);
     VL_IN8(&rst,0,0);
-    VL_IN8(&en,0,0);
     VL_IN8(&wr,0,0);
     VL_IN8(&rd,0,0);
     VL_IN8(&offset,7,0);

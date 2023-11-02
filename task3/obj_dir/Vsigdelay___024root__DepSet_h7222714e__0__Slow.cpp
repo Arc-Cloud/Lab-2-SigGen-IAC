@@ -33,7 +33,6 @@ VL_ATTR_COLD void Vsigdelay___024root___ctor_var_reset(Vsigdelay___024root* vlSe
     // Body
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->rst = VL_RAND_RESET_I(1);
-    vlSelf->en = VL_RAND_RESET_I(1);
     vlSelf->wr = VL_RAND_RESET_I(1);
     vlSelf->rd = VL_RAND_RESET_I(1);
     vlSelf->offset = VL_RAND_RESET_I(8);
@@ -41,8 +40,6 @@ VL_ATTR_COLD void Vsigdelay___024root___ctor_var_reset(Vsigdelay___024root* vlSe
     vlSelf->delayed_signal = VL_RAND_RESET_I(8);
     vlSelf->sigdelay__DOT____Vcellout__addrCounter__count2 = VL_RAND_RESET_I(8);
     vlSelf->sigdelay__DOT____Vcellout__addrCounter__count1 = VL_RAND_RESET_I(8);
-    vlSelf->sigdelay__DOT__wr_en = VL_RAND_RESET_I(1);
-    vlSelf->sigdelay__DOT__rd_en = VL_RAND_RESET_I(1);
     for (int __Vi0=0; __Vi0<512; ++__Vi0) {
         vlSelf->sigdelay__DOT__Ram__DOT__ram_array[__Vi0] = VL_RAND_RESET_I(8);
     }

@@ -2,7 +2,7 @@
 
 # cleanup
 rm -rf obj_dir
-rm -f counter.vcd
+rm -f sigdelay.vcd
 
 # run Verilator to translate Verilog into C++, including C++ testbench
 verilator -Wall -cc --trace sigdelay.sv dualram.sv counter.sv --exe sigdelay_tb.cpp

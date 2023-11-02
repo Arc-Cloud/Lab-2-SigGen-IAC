@@ -19,14 +19,14 @@ VL_INLINE_OPT void Vsigdelay___024root___sequent__TOP__0(Vsigdelay___024root* vl
     __Vdly__sigdelay__DOT____Vcellout__addrCounter__count1 
         = vlSelf->sigdelay__DOT____Vcellout__addrCounter__count1;
     __Vdlyvset__sigdelay__DOT__Ram__DOT__ram_array__v0 = 0U;
-    if (vlSelf->sigdelay__DOT__wr_en) {
+    if (vlSelf->wr) {
         __Vdlyvval__sigdelay__DOT__Ram__DOT__ram_array__v0 
             = vlSelf->mic_signal;
         __Vdlyvset__sigdelay__DOT__Ram__DOT__ram_array__v0 = 1U;
         __Vdlyvdim0__sigdelay__DOT__Ram__DOT__ram_array__v0 
             = vlSelf->sigdelay__DOT____Vcellout__addrCounter__count1;
     }
-    if (vlSelf->sigdelay__DOT__rd_en) {
+    if (vlSelf->rd) {
         vlSelf->delayed_signal = vlSelf->sigdelay__DOT__Ram__DOT__ram_array
             [vlSelf->sigdelay__DOT____Vcellout__addrCounter__count2];
     }
@@ -37,7 +37,7 @@ VL_INLINE_OPT void Vsigdelay___024root___sequent__TOP__0(Vsigdelay___024root* vl
     if (vlSelf->rst) {
         __Vdly__sigdelay__DOT____Vcellout__addrCounter__count1 = 0U;
         vlSelf->sigdelay__DOT____Vcellout__addrCounter__count2 = 0U;
-    } else if (vlSelf->en) {
+    } else {
         __Vdly__sigdelay__DOT____Vcellout__addrCounter__count1 
             = (0xffU & ((IData)(1U) + (IData)(vlSelf->sigdelay__DOT____Vcellout__addrCounter__count1)));
         vlSelf->sigdelay__DOT____Vcellout__addrCounter__count2 
@@ -71,8 +71,6 @@ void Vsigdelay___024root___eval_debug_assertions(Vsigdelay___024root* vlSelf) {
         Verilated::overWidthError("clk");}
     if (VL_UNLIKELY((vlSelf->rst & 0xfeU))) {
         Verilated::overWidthError("rst");}
-    if (VL_UNLIKELY((vlSelf->en & 0xfeU))) {
-        Verilated::overWidthError("en");}
     if (VL_UNLIKELY((vlSelf->wr & 0xfeU))) {
         Verilated::overWidthError("wr");}
     if (VL_UNLIKELY((vlSelf->rd & 0xfeU))) {

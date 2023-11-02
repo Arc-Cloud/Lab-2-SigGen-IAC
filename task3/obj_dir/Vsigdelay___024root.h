@@ -15,7 +15,6 @@ class Vsigdelay___024root final : public VerilatedModule {
     // DESIGN SPECIFIC STATE
     VL_IN8(clk,0,0);
     VL_IN8(rst,0,0);
-    VL_IN8(en,0,0);
     VL_IN8(wr,0,0);
     VL_IN8(rd,0,0);
     VL_IN8(offset,7,0);
@@ -23,8 +22,6 @@ class Vsigdelay___024root final : public VerilatedModule {
     VL_OUT8(delayed_signal,7,0);
     CData/*7:0*/ sigdelay__DOT____Vcellout__addrCounter__count2;
     CData/*7:0*/ sigdelay__DOT____Vcellout__addrCounter__count1;
-    CData/*0:0*/ sigdelay__DOT__wr_en;
-    CData/*0:0*/ sigdelay__DOT__rd_en;
     CData/*0:0*/ __Vclklast__TOP__clk;
     VlUnpacked<CData/*7:0*/, 512> sigdelay__DOT__Ram__DOT__ram_array;
     VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
